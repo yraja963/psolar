@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+    <div class="container">
+        <input type="range" min=1 max=100 value="50" class="slider" id="range"/>
+    </div>
+    <div class="header">
+    <div id="output" ></div>
+    <div id="suboutput" class="output">
+        <p id="listitem" style=" font-weight: 600; margin-left:180px; position:absolute; top: 150px;"></p>
+        <p id="listitem1" style=" font-weight: 600; margin-left:180px; position: absolute; top:200px" ></p>
+        <p id="listitem2" style=" font-weight: 600; margin-left:180px; position: absolute; top:250px"></p>
+        <p id="listitem3" style=" font-weight: 600; margin-left:180px; position: absolute; top:300px"></p>
+        
+        
+    </div>
+    <div id='baseprice' style="position: absolute;top: 400px; margin-left: 50px;"></div>
+    <h6 id='baseprice2' style="position: absolute;top: 410px; margin-left: 50px;"></h6>
+    <div id='baseprice3' style="position: absolute;top: 460px; margin-left: 50px;"></div>
+    <div id='baseprice4'></div>
+    <div id='baseprice5'></div>
+    </div>
+    </div>
+    <script>
+        const slider=document.getElementById("range")
+        const output=document.getElementById("output")
+        output.innerHTML= slider.value 
+        slider.oninput=function(){
+            output.innerHTML=slider.value
+        
+        if(output.innerHTML==50){
+            const val=document.getElementById("output").innerHTML="Rheem Pro Prestige" + slider.value + "Leak Guard"
+            const element=document.createElement("img")
+            element.src="C:\\Users\\RAJA YADAV\\OneDrive\\Pictures\\product_image.png";
+            element.classList.add("image")
+            document.getElementById("suboutput").appendChild(element)
+            const p3=document.getElementById("listitem")
+            const node1=document.createTextNode("4x more efficent than standard model")
+            p3.appendChild(node1)
+            const p4=document.getElementById("listitem1")
+            const node2=document.createTextNode("10-year manufacturer warranty")
+            p4.appendChild(node2)
+            const p5=document.getElementById("listitem2")
+            const node3=document.createTextNode("Built-in leak preventation system")
+            p5.appendChild(node3)
+            const p6=document.getElementById("listitem3")
+            const node4=document.createTextNode("Control settings with a mobile app")
+            p6.appendChild(node4)
+
+            document.getElementById("baseprice").innerHTML="Base Price.......................................................................................$1500"
+            document.getElementById("baseprice2").innerHTML="Avaliable Incentives.......................................................................................$0"
+            document.getElementById("baseprice3").innerHTML="Equipment Cost.......................................................................................$1500"
+            document.getElementById("baseprice4").innerHTML="Your Est. Annual Savings is $160"
+            document.getElementById("baseprice5").innerHTML="Get Install Quote"
+        
+            
+        }
+        else {
+            console.log("make it 50")
+        
+
+        }
+    }
+    </script>
+    </body>
+</html>
+<!--  -->
